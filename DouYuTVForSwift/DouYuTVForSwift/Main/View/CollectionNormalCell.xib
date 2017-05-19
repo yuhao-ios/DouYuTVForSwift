@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNormalCell" customModule="DouYuTVForSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="208" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="208" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="sWr-Dx-ShX">
+                        <rect key="frame" x="0.0" y="121" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="7oq-fQ-4gU"/>
+                            <constraint firstAttribute="width" constant="14" id="p5f-Ak-lgv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你们的捕鱼天团回来了！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-EY-VWL">
+                        <rect key="frame" x="19" y="116" width="113" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="fME-B8-ku5">
+                        <rect key="frame" x="0.0" y="0.0" width="208" height="111"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微山湖捕鱼工人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5p-1a-8bf">
+                        <rect key="frame" x="5" y="90" width="72" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-jt-kkc">
+                        <rect key="frame" x="149" y="90" width="54" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="9万在线" image="Image_online">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ChX-EY-VWL" secondAttribute="bottom" constant="5" id="1F6-QO-G1x"/>
+                <constraint firstAttribute="trailing" secondItem="fME-B8-ku5" secondAttribute="trailing" id="4eb-Vf-Xbb"/>
+                <constraint firstItem="ChX-EY-VWL" firstAttribute="centerY" secondItem="sWr-Dx-ShX" secondAttribute="centerY" id="7ba-n4-BpR"/>
+                <constraint firstItem="ChX-EY-VWL" firstAttribute="leading" secondItem="sWr-Dx-ShX" secondAttribute="trailing" constant="5" id="By9-Uu-itx"/>
+                <constraint firstItem="ChX-EY-VWL" firstAttribute="top" secondItem="fME-B8-ku5" secondAttribute="bottom" constant="5" id="GCJ-Of-9PG"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ChX-EY-VWL" secondAttribute="trailing" constant="137" id="HFw-0f-kh8"/>
+                <constraint firstItem="fME-B8-ku5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MlM-5g-gP0"/>
+                <constraint firstItem="z8l-jt-kkc" firstAttribute="centerY" secondItem="U5p-1a-8bf" secondAttribute="centerY" id="SCf-5K-JHy"/>
+                <constraint firstItem="U5p-1a-8bf" firstAttribute="bottom" secondItem="fME-B8-ku5" secondAttribute="bottom" constant="-5" id="SYZ-Nk-q2n"/>
+                <constraint firstItem="U5p-1a-8bf" firstAttribute="leading" secondItem="fME-B8-ku5" secondAttribute="leading" constant="5" id="Uaw-HM-nkH"/>
+                <constraint firstItem="z8l-jt-kkc" firstAttribute="trailing" secondItem="fME-B8-ku5" secondAttribute="trailing" constant="-5" id="eQG-Xt-gsD"/>
+                <constraint firstItem="z8l-jt-kkc" firstAttribute="bottom" secondItem="fME-B8-ku5" secondAttribute="bottom" constant="-5" id="oXa-Kf-6PN"/>
+                <constraint firstAttribute="bottom" secondItem="sWr-Dx-ShX" secondAttribute="bottom" constant="10" id="uqX-yY-srU"/>
+                <constraint firstItem="fME-B8-ku5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="utT-is-dTy"/>
+                <constraint firstItem="sWr-Dx-ShX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xDQ-1Q-EN3"/>
+            </constraints>
+            <size key="customSize" width="208" height="145"/>
+            <connections>
+                <outlet property="nickNameLabel" destination="U5p-1a-8bf" id="Tzg-z1-RPS"/>
+                <outlet property="onLineBtn" destination="z8l-jt-kkc" id="AjQ-Qg-dzU"/>
+                <outlet property="roomImageView" destination="fME-B8-ku5" id="jnz-88-dOc"/>
+                <outlet property="roomTitleLabel" destination="ChX-EY-VWL" id="Vfq-UG-v2h"/>
+            </connections>
+            <point key="canvasLocation" x="126" y="107.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>

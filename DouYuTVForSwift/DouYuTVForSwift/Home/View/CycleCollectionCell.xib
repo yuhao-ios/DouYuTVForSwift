@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CycleCollectionCell" customModule="DouYuTVForSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="129"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="okx-q3-mqs">
+                        <rect key="frame" x="0.0" y="0.0" width="303" height="129"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9d-GA-lq5">
+                        <rect key="frame" x="0.0" y="99" width="303" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2c-sF-KPA">
+                                <rect key="frame" x="20" y="0.0" width="283" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T2c-sF-KPA" firstAttribute="top" secondItem="M9d-GA-lq5" secondAttribute="top" id="LNu-kB-nss"/>
+                            <constraint firstAttribute="bottom" secondItem="T2c-sF-KPA" secondAttribute="bottom" id="Nyf-el-gRy"/>
+                            <constraint firstAttribute="trailing" secondItem="T2c-sF-KPA" secondAttribute="trailing" id="O5r-JV-emw"/>
+                            <constraint firstItem="T2c-sF-KPA" firstAttribute="leading" secondItem="M9d-GA-lq5" secondAttribute="leading" constant="20" id="Smw-6h-dNn"/>
+                            <constraint firstAttribute="height" constant="30" id="XhO-Zq-Bri"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="M9d-GA-lq5" secondAttribute="bottom" id="3qc-im-xQM"/>
+                <constraint firstItem="okx-q3-mqs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Cfe-ha-Iuh"/>
+                <constraint firstAttribute="trailing" secondItem="okx-q3-mqs" secondAttribute="trailing" id="NCd-iT-9SI"/>
+                <constraint firstAttribute="trailing" secondItem="M9d-GA-lq5" secondAttribute="trailing" id="Q7R-bt-Ef9"/>
+                <constraint firstItem="M9d-GA-lq5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yvd-Tw-Usj"/>
+                <constraint firstItem="okx-q3-mqs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pgL-8L-wpa"/>
+                <constraint firstAttribute="bottom" secondItem="okx-q3-mqs" secondAttribute="bottom" id="tGJ-eG-iQZ"/>
+            </constraints>
+            <size key="customSize" width="303" height="129"/>
+            <connections>
+                <outlet property="iconImageView" destination="okx-q3-mqs" id="Ip8-w1-MZv"/>
+                <outlet property="titleTextLabel" destination="T2c-sF-KPA" id="kh1-Uc-eyc"/>
+            </connections>
+            <point key="canvasLocation" x="51.5" y="75.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>
