@@ -19,3 +19,5 @@ let kStatusBarH : CGFloat = 20
 let kNaviBarH : CGFloat = 44
 ///分栏高度
 let kTabBarH : CGFloat = 44
+///TitleView的高度
+ let kPageTitleViewH : CGFloat = 40

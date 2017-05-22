@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RecommendVM: NSObject {
+class RecommendVM: BaseAnchorVM {
     //存放所有数据的数组
-    var anchorGroups : [AnchorGroupModel] = [AnchorGroupModel]()
+   // var anchorGroups : [AnchorGroupModel] = [AnchorGroupModel]()
     //所有的颜值组数据
     fileprivate  var pettrys :AnchorGroupModel = AnchorGroupModel()
     //热门推荐数据
@@ -96,32 +96,18 @@ class RecommendVM: NSObject {
      http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=
      */
     aGroup.enter()
-        NetworkTools.requestData(type: .GET, url: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameter) { (respone) in
-            
-            //1.将数据转化为字典类型
-            guard let result = respone as? [String : NSObject] else{
-            
-             return
-            }
-            //2.根据data key 读取字典数组
-            guard let dataArray = result["data"] as? [[String : NSObject]] else {
-            
-                return;
-            }
-            //3.便利数组 取出每一组字典模型（组的基本数据）
-            for dict in dataArray {
-             
-                let group = AnchorGroupModel(dict: dict)
-                
-                self.anchorGroups.append(group);
-            }
-          aGroup.leave()
+        //MARK: - 抽取
+        loadAnchorAllData(url: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameter,isGroupData: true) {
+            aGroup.leave()
         }
-    
+
+        
+        
+        
       aGroup.notify(queue: DispatchQueue.main) {
         print("数据请求完毕");
         //分别将热门 以及 颜值组的组数据插入到总数据中
-        self.anchorGroups .insert(self.pettrys, at: 0)
+        self.anchorGroups.insert(self.pettrys, at: 0)
         self.anchorGroups.insert(self.hots, at: 0)
         //加载数据成功后的回调
         finishedCallback()

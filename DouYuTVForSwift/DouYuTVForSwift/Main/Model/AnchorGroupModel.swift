@@ -8,7 +8,7 @@
 
 import UIKit
 //组model
-class AnchorGroupModel: NSObject {
+class AnchorGroupModel: BaseGameModel {
    
     //该组的房间信息
     var room_list : [[String : NSObject]]?{
@@ -29,28 +29,11 @@ class AnchorGroupModel: NSObject {
     }
     
     var push_vertical_screen  : String?
-    //该组的图标
-    var icon_url : String?
+
     var icon_name : String?
-    //该组的标题
-    var tag_name : String?
+
     //存放四个房间model 的数组
     var anchors:[AnchorModel] = [AnchorModel]()
 
    
-    
-    
-   override  init() {
-        super.init()
-    }
-    
-    init(dict:[String:NSObject]) {
-        
-        super.init()
-        setValuesForKeys(dict)
-    }
-    
-    //属性没写全 避免奔溃
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-    }
-}
+   }

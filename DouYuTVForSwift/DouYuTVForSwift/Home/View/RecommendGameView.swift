@@ -16,16 +16,10 @@ class RecommendGameView: UIView {
     //MARK: -  控件属性
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var groups :[AnchorGroupModel]?{
+    var groups :[BaseGameModel]?{
     
         didSet{
         
-           //1.移除前两组数据  添加一组更多数据
-            groups?.remove(at: 0)
-            groups?.remove(at: 0)
-            let moreGroup = AnchorGroupModel()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
             //2.刷新collectionView
             collectionView.reloadData()
         }
@@ -54,8 +48,6 @@ class RecommendGameView: UIView {
        collectionView.showsHorizontalScrollIndicator = false
        collectionView.isPagingEnabled = true
     }
-    
-    
 }
 
  //MARK: - 初始化

@@ -20,7 +20,7 @@ protocol  PageContentViewDelegate : class {
 }
 
 
-fileprivate let cellID = "cell"
+fileprivate let PageCellID = "cell"
 ///标题对应的内容视图
 class PageContentView: UIView {
 
@@ -61,7 +61,7 @@ class PageContentView: UIView {
         collectionView.bounces = false
         collectionView.dataSource  = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: PageCellID)
        return collectionView
     }()
     
@@ -138,7 +138,7 @@ extension PageContentView : UICollectionViewDataSource,UICollectionViewDelegate{
     func  collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         //1.创建cell
-        let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: PageCellID, for: indexPath)
         
         //2.避免循环引用 移除cell上的所有子视图
         for view in cell.contentView.subviews {
@@ -208,15 +208,12 @@ extension PageContentView : UICollectionViewDataSource,UICollectionViewDelegate{
             //计算目标index
             targetIndex = Int(currenOffsetx/scrollView.frame.width)
             
-          
             sourceIndex = targetIndex+1
          
             if sourceIndex >= childVcs.count {
             
               sourceIndex = childVcs.count - 1
             }
-         
-            
         }
         
         //挂上代理

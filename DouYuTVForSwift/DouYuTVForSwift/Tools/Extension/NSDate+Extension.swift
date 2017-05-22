@@ -15,7 +15,7 @@ extension NSDate {
         
         let nowDate = NSDate()
         let interVal  = nowDate.timeIntervalSince1970
-        print("\(interVal)")
+      
         return "\(interVal)"
     }
 

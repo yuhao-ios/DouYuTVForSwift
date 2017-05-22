@@ -14,7 +14,8 @@ class GameCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
-    var group : AnchorGroupModel?{
+    @IBOutlet weak var lineView: UIView!
+    var group : BaseGameModel?{
     
         didSet {
             guard let group = group else {
@@ -22,13 +23,12 @@ class GameCollectionViewCell: UICollectionViewCell {
             }
            self.titleTextLabel.text = group.tag_name
             if let url = group.icon_url {
-            self.iconImageView.kf.setImage(with: URL(string:url), placeholder: UIImage(named:"img_loading_1"), options: nil, progressBlock: nil, completionHandler: nil)
+            self.iconImageView.kf.setImage(with: URL(string:url), placeholder: UIImage(named: "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
             }else{
             
               self.iconImageView.image = UIImage(named: "home_more_btn")
             }
         }
-    
     }
     
     

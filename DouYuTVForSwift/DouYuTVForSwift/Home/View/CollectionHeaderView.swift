@@ -24,10 +24,9 @@ class CollectionHeaderView: UICollectionReusableView {
         //判断有没有图标的url  有就赋值 没有给默认
          guard let url = anchorGroup?.icon_url else {
                 
-                self.iconImageView.image = UIImage(named: (anchorGroup?.icon_name)!)
+            self.iconImageView.image = UIImage(named: (anchorGroup?.icon_name)!)
                 return
             }
-         
             self.iconImageView.kf.setImage(with: URL(string: url))
         }
     
@@ -37,10 +36,6 @@ class CollectionHeaderView: UICollectionReusableView {
         super.awakeFromNib()
         
     }
-    
-    
-    
-    
     
     
     

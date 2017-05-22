@@ -7,8 +7,7 @@
 //
 
 import UIKit
-///TitleView的高度
-fileprivate let kPageTitleViewH : CGFloat = 40
+
 
 class HomeVC: UIViewController {
 
@@ -33,12 +32,15 @@ class HomeVC: UIViewController {
         //2.确定内容视图所有的子控制器
         var childVcs = [UIViewController]()
         childVcs.append(RecommendVC())
-        for _ in 0..<((self?.titles.count)!-1){
+        childVcs.append(GameViewController())
+        childVcs.append(AmuseVC())
+        childVcs.append(FunnyViewController())
+       /* for _ in 0..<((self?.titles.count)!-2){
             let vc = UIViewController()
          
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(UInt32(255))), g:  CGFloat(arc4random_uniform(UInt32(255))), b:  CGFloat(arc4random_uniform(UInt32(255))), alpha: 1)
            childVcs.append(vc)
-        }
+        }*/
         //3.初始化内容视图
         let pageContentView = PageContentView(frame: contentViewFrame, childVcs: childVcs, parentViewController: self)
         
