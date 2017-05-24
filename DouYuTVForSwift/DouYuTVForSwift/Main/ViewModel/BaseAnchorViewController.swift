@@ -29,7 +29,7 @@ import UIKit
  let collectionHeaderID : String = "Header"
 
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     //MARK: - 懒加载属性
     
      lazy var baseAnchorVm : BaseAnchorVM = BaseAnchorVM()
@@ -76,9 +76,13 @@ class BaseAnchorViewController: UIViewController {
 extension BaseAnchorViewController {
     
     //布局
-     func loadUI(){
-        
+     override func loadUI(){
+        //1.给父类内容视图赋值
+        contentView = collectionView
+        //2.添加collectionView
         view.addSubview(collectionView)
+        //3.调用父类界面
+        super.loadUI()
         
     }
     //加载数据
@@ -115,6 +119,16 @@ extension BaseAnchorViewController : UICollectionViewDelegate,UICollectionViewDa
         // cell.backgroundColor = UIColor.randomColor()
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print(indexPath.section,indexPath.row)
+        
+    }
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         

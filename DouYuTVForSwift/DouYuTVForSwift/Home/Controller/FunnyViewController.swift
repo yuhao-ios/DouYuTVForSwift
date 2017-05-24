@@ -17,7 +17,9 @@ class FunnyViewController: BaseAnchorViewController {
 extension FunnyViewController {
 
     override func loadUI() {
+        
         super.loadUI()
+        
         //重新设置布局
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.headerReferenceSize = CGSize.zero
@@ -26,13 +28,15 @@ extension FunnyViewController {
     
     override func loadData() {
         super.loadData()
-   
+        //1.给父类model 赋值
+        self.baseAnchorVm = self.funnyVM
         //获取数据
         funnyVM.loadFunnyAllData{
-            //1.给父类model 赋值
-            self.baseAnchorVm = self.funnyVM
+           
             //2.刷新界面
             self.collectionView.reloadData()
+            //3.数据加载完成 展示内容
+            self.showContentView()
         }
     }
 

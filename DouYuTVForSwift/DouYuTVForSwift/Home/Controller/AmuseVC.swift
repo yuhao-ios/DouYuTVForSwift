@@ -35,15 +35,14 @@ extension AmuseVC {
     
     //加载界面
     override func loadUI() {
-        super.loadUI()
         
+        super.loadUI()
         //添加菜单View
         collectionView.addSubview(amuseMenuView)
         
         collectionView.contentInset = UIEdgeInsets(top: kMenuViewHeight, left: 0, bottom: 0, right: 0)
     
     }
-    
     
     //加载数据
     override func loadData () {
@@ -53,9 +52,11 @@ extension AmuseVC {
         baseAnchorVm = amuseVM
     
         amuseVM.loadAmuseAllData {
-            
+            //2.刷新界面
             self.collectionView.reloadData()
             self.amuseMenuView.groups = self.amuseVM.anchorGroups
+            //3.数据加载完成 展示内容
+            self.showContentView()
         }
     
     }

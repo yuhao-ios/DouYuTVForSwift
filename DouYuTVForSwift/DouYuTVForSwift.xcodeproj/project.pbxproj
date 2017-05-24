@@ -14,6 +14,7 @@
 		D03B98861EC1A7AE000ABFED /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03B98841EC1A7AE000ABFED /* CollectionNormalCell.xib */; };
 		D03B98891EC1AF1D000ABFED /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B98871EC1AF1D000ABFED /* CollectionPrettyCell.swift */; };
 		D03B988A1EC1AF1D000ABFED /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03B98881EC1AF1D000ABFED /* CollectionPrettyCell.xib */; };
+		D05CBE4B1ED53C240032F372 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CBE4A1ED53C240032F372 /* BaseViewController.swift */; };
 		D05E3D481ECC38DB00A3EF6C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E3D471ECC38DB00A3EF6C /* MainTabBarController.swift */; };
 		D05E3D4B1ECC392D00A3EF6C /* AnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E3D491ECC392D00A3EF6C /* AnchorGroupModel.swift */; };
 		D05E3D4C1ECC392D00A3EF6C /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E3D4A1ECC392D00A3EF6C /* AnchorModel.swift */; };
@@ -95,6 +96,7 @@
 		D03B98841EC1A7AE000ABFED /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		D03B98871EC1AF1D000ABFED /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		D03B98881EC1AF1D000ABFED /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		D05CBE4A1ED53C240032F372 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D05E3D471ECC38DB00A3EF6C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D05E3D491ECC392D00A3EF6C /* AnchorGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroupModel.swift; sourceTree = "<group>"; };
 		D05E3D4A1ECC392D00A3EF6C /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			children = (
 				D07586C61ED295610091D698 /* BaseAnchorViewController.swift */,
 				D05E3D471ECC38DB00A3EF6C /* MainTabBarController.swift */,
+				D05CBE4A1ED53C240032F372 /* BaseViewController.swift */,
 				D06959351EA0A55E00EB7112 /* Main.storyboard */,
 			);
 			path = Controller;
@@ -718,6 +721,7 @@
 				D06959A81EA0D3B400EB7112 /* PageTitleView.swift in Sources */,
 				D07586DF1ED2F1340091D698 /* FunnyVM.swift in Sources */,
 				D07586C71ED295610091D698 /* BaseAnchorViewController.swift in Sources */,
+				D05CBE4B1ED53C240032F372 /* BaseViewController.swift in Sources */,
 				D05E3D481ECC38DB00A3EF6C /* MainTabBarController.swift in Sources */,
 				D06C56DC1ECD79C700F1A29A /* CycleViewModel.swift in Sources */,
 				D07586C91ED2BF620091D698 /* AmuseMenuView.swift in Sources */,

@@ -59,7 +59,6 @@ extension RecommendVC {
         
         //给父类赋值
         baseAnchorVm = recommandVM
-        
         //加载推荐直播数据
         recommandVM.requestData {
             //1.刷新collectionView
@@ -76,12 +75,15 @@ extension RecommendVC {
             
             //2.2给gameView设置数据
             self.gameView.groups = groups
+            //3.数据加载完成 展示内容
+            self.showContentView()
         }
         //加载无限轮播数据
         recommandVM.requestCycleData {
             
             self.cycleView.cycles = self.recommandVM.cycles
         }
+
     }
 }
 

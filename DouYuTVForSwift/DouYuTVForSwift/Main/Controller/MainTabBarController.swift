@@ -22,10 +22,6 @@ class MainTabBarController: UITabBarController {
         
     }
     
-    
-    
-    
-    
     //MARK: - 添加子控制器
     fileprivate func addChildVC(storyName:String){
     

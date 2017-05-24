@@ -18,7 +18,7 @@ fileprivate let kGameVCCell  = "kGameVCCell"
 
 fileprivate let kGameHeader = "kGameHeader"
 
-class GameViewController: UIViewController {
+class GameViewController: BaseViewController {
     
     
     //MARK: - 懒加载属性
@@ -70,7 +70,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
     
-        setUpUI()
+        loadUI()
         
         loadData()
         
@@ -81,16 +81,20 @@ class GameViewController: UIViewController {
 //MARK: - 控制器方法
 extension GameViewController {
 
-    //设置UI
-    fileprivate func setUpUI() {
-        
+     //设置UI
+    override func loadUI() {
+     // 0.给ContentView进行赋值
+     contentView = collectionView
+     // 1.添加UICollectionView   
      view.addSubview(collectionView)
     
-    collectionView.addSubview(gameHeaderView)
+     collectionView.addSubview(gameHeaderView)
     
-    collectionView.addSubview(recommendGameView)
+     collectionView.addSubview(recommendGameView)
         
-    collectionView.contentInset = UIEdgeInsets(top: 120, left: 0, bottom: 0, right: 0)
+     collectionView.contentInset = UIEdgeInsets(top: 120, left: 0, bottom: 0, right: 0)
+        
+      super.loadUI()
     
     }
   
@@ -103,6 +107,8 @@ extension GameViewController {
              //取出前十个model
             let gameGroups = Array(self.gameViewModel.games[0..<10])
             self.recommendGameView.groups = gameGroups
+            //3.数据加载完成 展示内容
+            self.showContentView()
             
         }
     }
